@@ -10,17 +10,17 @@ public class Coin
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long coinid;
     private String name;
-    private String namepural;
+    private String nameplural;
     private double value;
     private double quantity;
 
     public Coin(String name,
-                String namepural,
+                String nameplural,
                 double value,
                 double quantity)
     {
         this.name = name;
-        this.namepural = namepural;
+        this.nameplural = nameplural;
         this.value = value;
         this.quantity = quantity;
     }
@@ -44,14 +44,14 @@ public class Coin
         this.name = name;
     }
 
-    public String getNamepural()
+    public String getNameplural()
     {
-        return namepural;
+        return nameplural;
     }
 
-    public void setNamepural(String namepural)
+    public void setNamepural(String nameplural)
     {
-        this.namepural = namepural;
+        this.nameplural = nameplural;
     }
 
     public double getValue()
@@ -80,7 +80,7 @@ public class Coin
         return "Coin{" +
                 "coinid=" + coinid +
                 ", name='" + name + '\'' +
-                ", namepural='" + namepural + '\'' +
+                ", nameplural='" + nameplural + '\'' +
                 ", value=" + value +
                 ", quantity=" + quantity +
                 '}';

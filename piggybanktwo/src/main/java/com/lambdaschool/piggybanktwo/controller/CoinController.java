@@ -25,17 +25,16 @@ public class CoinController
         double sumCoin = 0;
         for (Coin c : myList)
         {
-            double product = c.getQuantity() * c.getValue();
-            sumCoin = sumCoin + product;
+            sumCoin += c.getQuantity() * c.getValue();
             if(c.getQuantity() > 1)
             {
-                System.out.println(c.getQuantity() + " " + c.getNamepural());
+                System.out.println(c.getQuantity() + " " + c.getNameplural());
             } else
             {
                 System.out.println(c.getQuantity() + " " + c.getName());
             }
         }
         System.out.println("The piggy bank holds " + sumCoin);
-        return new ResponseEntity<>("The piggy bank holds " + sumCoin, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
